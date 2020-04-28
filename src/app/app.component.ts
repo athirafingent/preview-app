@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'preview-app';
+  url:string;
+
+  previewPdf() {
+    this.url = 'http://www.africau.edu/images/default/sample.pdf';
+    // this.url = 'https://www.montclair.edu/media/montclairedu/oit/documentation/whatsnewinoffice20072003/Understanding_Views.pdf';
+  }
+  previewDoc() {
+    this.url = 'https://file-examples.com/wp-content/uploads/2017/02/file-sample_100kB.docx';
+  }
 }
