@@ -2,6 +2,8 @@
 <br><br>
 <button (click)="previewDoc()">Preview docx</button>
 <br><br>
+<button (click)="previewPdfProtected()">Preview PDF without download option</button>
+<br><br>
 
-<ngx-doc-viewer [url]="url" viewer="google"  style="width:100%;height:93vh;">
+<ngx-doc-viewer [url]="url" viewer="google"  style="width:100%;height:93vh;" *ngIf="pdf_protected == 1; then disableContent='all'">
 </ngx-doc-viewer> 
